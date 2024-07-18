@@ -7,7 +7,6 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
-[ -z "$TMUX" ] && { tmux attach || exec tmux new-session; }
 . "$HOME/.cargo/env"
 #!/bin/sh
 if [ "$TERM" = "linux" ]; then
