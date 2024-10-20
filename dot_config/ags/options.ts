@@ -85,7 +85,6 @@ const options = mkOptions(OPTIONS, {
                 "colorpicker",
                 "screenrecord",
                 "system",
-                "battery",
                 "powermenu",
             ]),
         },
@@ -157,10 +156,7 @@ const options = mkOptions(OPTIONS, {
             max: opt(6),
             favorites: opt([
                 [
-                    "firefox",
-                    "wezterm",
-                    "org.gnome.Nautilus",
-                    "org.gnome.Calendar",
+                    "zen-browser",
                     "spotify",
                 ],
             ]),
