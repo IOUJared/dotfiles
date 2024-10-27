@@ -1,3 +1,0 @@
-0000000000000000000000000000000000000000 cedbb9e22846eb4b1fff0c47c3c4dbafb73601f0 jared <jared@archie.(none)> 1717921062 -0500	fetch --depth=1 origin: storing head
-cedbb9e22846eb4b1fff0c47c3c4dbafb73601f0 a87e9c715b2d3249681f9cc8f8d9718030674d50 jared <jared@archie.(none)> 1719362899 -0500	pull --quiet --rebase origin master: fast-forward
-a87e9c715b2d3249681f9cc8f8d9718030674d50 5b37e218e5275c11cb5fecc61f943e6cea3e64bf Jared Scheer <jaredjscheer@gmail.com> 1720556966 -0500	pull --quiet --rebase origin master: fast-forward
