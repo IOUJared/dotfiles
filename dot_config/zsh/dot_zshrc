@@ -1,0 +1,66 @@
+export ZSH="$XDG_DATA_HOME/oh-my-zsh"
+export GOPATH=$XDG_DATA_HOME/go
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
+CASE_SENSSITIVE="false"
+export PYTHONSTARTUP="$HOME"/python/pythonrc
+
+source $(dirname $(gem which colorls))/tab_complete.sh
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-completions fzf-tab)
+
+source $ZSH/oh-my-zsh.sh
+# User configuration
+
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+
+alias vi='nvim'
+alias vim='nvim'
+
+eval "$(zoxide init --cmd cd zsh)"
+
+# Created by `pipx` on 2024-06-25 01:46:07
+export PATH="$PATH:/home/jared/.local/bin"
+
+# bun completions
+[ -s "/home/jared/.bun/_bun" ] && source "/home/jared/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$PATH:$BUN_INSTALL/bin"
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$HOME/xxxxx
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+eval "$(fzf --zsh)"
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+echo -ne '\e[5 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+#!/bin/sh
+if [ "$TERM" = "linux" ]; then
+  /bin/echo -e "
+	\e]P0#191724
+	\e]P1#eb6f92
+	\e]P2#9ccfd8
+	\e]P3#f6c177
+	\e]P4#31748f
+	\e]P5#c4a7e7
+	\e]P6#ebbcba
+	\e]P7#e0def4
+	\e]P8#26233a
+	\e]P9#eb6f92
+	\e]PA#9ccfd8
+	\e]PB#f6c177
+	\e]PC#31748f
+	\e]PD#c4a7e7
+	\e]PE#ebbcba
+	\e]PF#e0def4
+	"
+  # get rid of artifacts
+  clear
+fi
