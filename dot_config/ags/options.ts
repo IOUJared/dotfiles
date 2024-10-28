@@ -14,17 +14,17 @@ const options = mkOptions(OPTIONS, {
     theme: {
         dark: {
             primary: {
-                bg: opt("#51a4e7"),
-                fg: opt("#141414"),
+                bg: opt("#191724"),
+                fg: opt("#26233a"),
             },
             error: {
-                bg: opt("#e55f86"),
-                fg: opt("#141414"),
+                bg: opt("#191724"),
+                fg: opt("#e0def4"),
             },
             bg: opt("#171717"),
             fg: opt("#eeeeee"),
-            widget: opt("#eeeeee"),
-            border: opt("#eeeeee"),
+            widget: opt("#1f1d2e"),
+            border: opt("#524f67"),
         },
         light: {
             primary: {
@@ -45,13 +45,13 @@ const options = mkOptions(OPTIONS, {
         scheme: opt<"dark" | "light">("dark"),
         widget: { opacity: opt(94) },
         border: {
-            width: opt(1),
+            width: opt(2.4),
             opacity: opt(96),
         },
 
         shadows: opt(true),
         padding: opt(7),
-        spacing: opt(12),
+        spacing: opt(8),
         radius: opt(11),
     },
 
@@ -112,7 +112,7 @@ const options = mkOptions(OPTIONS, {
             low: opt(30),
         },
         workspaces: {
-            workspaces: opt(7),
+            workspaces: opt(4),
         },
         taskbar: {
             iconSize: opt(0),
@@ -229,8 +229,8 @@ const options = mkOptions(OPTIONS, {
     },
 
     hyprland: {
-        gaps: opt(2.4),
-        inactiveBorder: opt("#282828"),
+        gaps: opt(0.5),
+        inactiveBorder: opt("#524f67"),
         gapsWhenOnly: opt(false),
     },
 })
