@@ -158,7 +158,7 @@
     "custom/updates":{
     "tooltip": false,
     "format": "<span foreground=\"#f1d8a5\">󰮯</span>",
-    "on-click": "kitty -e paru -Syu && notify-send -a 'System' 'The system has been updated' "
+    "on-click": "kitty -e ~/.config/waybar/scripts/update.sh && notify-send -a 'System' 'The system has been updated'"
   },
     "custom/color-picker": {
       "format": "",

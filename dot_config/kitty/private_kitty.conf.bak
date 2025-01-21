@@ -9,11 +9,11 @@ bold_italic_font auto
 
 gradient = 1
 gradient_count = 4
-# url_color #4dc6ff
+url_color #4dc6ff
 
 term xterm-256color
 
-background_opacity 0.8
+background_opacity 0.5
 confirm_os_window_close 0
 
 initial_window_width  640
@@ -39,18 +39,14 @@ wheel_scroll_min_lines 1
 
 enable_audio_bell no
 visual_bell_duration 0.0
-# visual_bell_color none
+visual_bell_color none
 window_alert_on_bell no
-# selection_foreground none
-# selection_background none
+
+selection_foreground none
+selection_background none
 
 window_padding_width 10 10
-# foreground #dddddd
-# background #000000
-# cursor #dddddd
 
-
-# BEGIN_KITTY_THEME
-# Rosé Pine
-include current-theme.conf
-# END_KITTY_THEME
+foreground #dddddd
+background #000000
+cursor #dddddd

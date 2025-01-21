@@ -1,8 +1,8 @@
 /* AUTO GENERATED. DO NOT EDIT. CHANGES WILL BE OVERWRITTEN. */
 
-@define-color foreground rgba(38, 35, 58, 0.8);
-@define-color background hsla(247, 23%, 15%, 0.98);
-@define-color color1 hsl(2, 55%, 83%);
+@define-color foreground rgba(255, 255, 255, 0.8);
+@define-color background hsla(240, 12.7%, 13.9%, 0.98);
+@define-color color1 hsl(172, 100%, 25.3%);
 /* AUTO GENERATED. DO NOT EDIT. CHANGES WILL BE OVERWRITTEN. */
 
 #window,
@@ -26,6 +26,13 @@ slider,
 #sub,
 #activationlabel {
   all: unset;
+}
+
+#cfgerr {
+  background: rgba(255, 0, 0, 0.4);
+  margin-top: 20px;
+  padding: 8px;
+  font-size: 1.2em;
 }
 
 #window {

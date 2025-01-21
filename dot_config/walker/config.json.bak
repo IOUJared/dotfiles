@@ -76,16 +76,6 @@
       "switcher_only": true,
       "weight": 5
     },
-    "runner": {
-      "generic_entry": false,
-      "history": true,
-      "icon": "utilities-terminal",
-      "name": "runner",
-      "placeholder": "Runner",
-      "refresh": true,
-      "typeahead": true,
-      "weight": 5
-    },
     "ssh": {
       "history": true,
       "icon": "preferences-system-network",
