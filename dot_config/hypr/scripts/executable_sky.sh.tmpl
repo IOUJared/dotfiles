@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Set your API key and city ID
+CITY_ID= {{ (bitwardenSecrets "9ecf10d7-7316-4ecd-b992-b2de0079bd40" .accessToken).value }}
+API_KEY = {{ (bitwardenSecrets "4c51ac95-ad28-4a85-859f-b2de007459dc" .accessToken).value }}
+# Make the API request to OpenWeather
+response=$(curl -s "https://api.openweathermap.org/data/2.5/weather?id=${CITY_ID}&appid=${API_KEY}")
+
+# Parse the sky condition from the JSON response and capitalize it
+sky_condition=$(echo $response | jq -r '.weather[0].description' | awk '{print toupper($0)}')
+
+# Output the capitalized sky condition
+echo "$sky_condition"
+
