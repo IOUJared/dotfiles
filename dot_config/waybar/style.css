@@ -4,8 +4,8 @@
 #waybar.top > box.horizontal {
   background: #191724;
   box-shadow: 0 0 4pt #21202e;
-  border-radius: 4pt;
-  margin: 2pt;
+  border-radius: 2pt;
+  margin: 0pt;
   padding: 1pt;
 }
 
@@ -31,12 +31,12 @@
 #workspaces button.active {
   color: #e0def4;
 }
-#workspaces button:hover, #workspaces button:focus {
+#workspaces button:hover, #workspaces button:active {
   background: none;
   border-color: transparent;
   box-shadow: none;
 }
-#workspaces button:hover:not(.active):not(.visible), #workspaces button:focus:not(.active):not(.visible) {
+#workspaces button:hover:not(.active):not(.visible), #workspaces button:active:not(.active):not(.visible) {
   color: #9399b2;
 }
 
@@ -82,41 +82,22 @@
     color: #cdd6f4;
   }
 }
-#backlight {
-  color: #cba6f7;
-  margin-right: 10pt;
-}
 
 #pulseaudio {
   color: #31748f;
   margin-right: 10pt;
 }
 
-#battery {
-  color: #f9e2af;
-  margin-right: 15pt;
-}
 
-#battery.full,
-#battery.good,
-#battery.charging,
-#battery.plugged {
-  color: #a6e3a1;
-}
-
-#battery.critical:not(.charging) {
-  color: #f38ba8;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
 
 #custom-color-picker {
   margin-right: 18pt;
   font-size: 9pt;
   color: #e0def4;
+}
+#custom-updates {
+  margin-right: 18pt;
+  font-size: 9pt;
 }
 
 #custom-screenshot {
@@ -126,8 +107,12 @@
 }
 
 #custom-wallpaper {
-  margin-right: 16pt;
+  margin-right: 18pt;
   font-size: 10pt;
+  color: #e0def4;
+}
+#clock {
+  margin-right: 10pt;
   color: #e0def4;
 }
 
@@ -135,11 +120,6 @@
   margin-right: 10pt;
   font-size: 10pt;
   color: #eb6f92;
-}
-#clock {
-  margin-right: 12pt;
-  margin-left: 12pt;
-  color: #e0def4;
 }
 
 #waybar.bottom {

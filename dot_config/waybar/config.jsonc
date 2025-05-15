@@ -35,9 +35,11 @@
       "exec": "~/.config/waybar/scripts/cheatsheet.py",
       "interval": "once"
     },
-  "hyprland/workspaces": {
+    "hyprland/workspaces": {
       "on-click": "activate",
       "format": "{icon}",
+      "on-scroll-up": "hyprctl dispatch workspace r+1",
+      "on-scroll-down": "hyprctl dispatch workspace r-1",
       "format-icons": {
         "1": "1",
         "2": "2",
@@ -45,9 +47,12 @@
         "4": "4",
         "5": "5",
         "active": "",
-        "default": ""
+        "default": "",
+        "separate-outputs": false,
+        "active-only": true,
+        "active-only": true
       },
-  },
+    },
     "mpris": {
       "format": "{player_icon} {artist} - {title}",
       "player": "spotify",
@@ -81,20 +86,7 @@
         "blueman-manager": "Bluetooth Settings"
       }
     },
-    "clock": {
-      "format": "  {:%a %e %b %H:%M}",
-      "tooltip-format": "<tt>{calendar}</tt>",
-      "calendar": {
-        "mode": "month",
-        "format": {
-          "months": "<span color='#cdd6f4'><b>{}</b></span>",
-          "days": "<span color='#cdd6f4'><b>{}</b></span>",
-          "weeks": "<span color='#cdd6f4'><b>W{}</b></span>",
-          "weekdays": "<span color='#cdd6f4'><b>{}</b></span>",
-          "today": "<span color='#f38ba8'><b>{}</b></span>"
-        }
-      }
-    },
+
     "memory": {
       "interval": 30,
       "format": "  {used}GiB",
@@ -105,15 +97,7 @@
       "icon-size": 15,
       "spacing": 10
     },
-    "backlight": {
-      "format": "{icon} <b>{percent}%</b>",
-      "format-icons": [
-        "󰃞",
-        "󰃟",
-        "󰃠"
-      ],
-      "tooltip": false
-    },
+
     "pulseaudio": {
       "format": "{icon} <b>{volume}%</b>",
       "format-muted": " 󰝟 ",
@@ -128,38 +112,18 @@
         ]
       },
       "tooltip": true,
-      "on-click": "pavucontrol",
+      "on-click": "pwvucontrol",
       "ignored-sinks": [
         "JamesDSP Sink",
         "HDA NVidia Digital Stereo (HDMI)",
         "Easy Effects Sink"
       ]
     },
-    "battery": {
-      "format": "{icon} {capacity}%",
-      "format-plugged": " {capacity}%",
-      "format-icons": [
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      "max-length": 25,
-      "tooltip": true,
-      "interval": 5,
-      "states": {
-        "good": 70,
-        "warning": 30,
-        "critical": 15
-      },
-      "on-click": "rog-control-center"
-    },
     "custom/updates":{
     "tooltip": false,
     "format": "<span foreground=\"#f1d8a5\">󰮯</span>",
-    "on-click": "kitty -e ~/.config/waybar/scripts/update.sh && notify-send -a 'System' 'The system has been updated'"
-  },
+    "on-click": "alacritty --hold -e ~/.config/waybar/scripts/update.sh && notify-send -a 'System' 'The system has been updated'"
+    },
     "custom/color-picker": {
       "format": "",
       "on-click": "hyprpicker -an && notify-send 'Colour copied to clipboard'", // Show the colour in the notification with wl-paste.
@@ -176,6 +140,12 @@
       "on-click": "waypaper --random",
       "on-click-right": "waypaper",
       "tooltip-format": "Left-click:  Change Wallpaper\nRight-click: Open Wallpaper Picker"
+    },
+    "clock": {
+      "interval": 60,
+      "tooltip": true,
+      "format": "{:%H:%M %a}",
+      "tooltip-format": "{:L%Y-%m-%d}",
     },
     "custom/power": {
       "format": "",
